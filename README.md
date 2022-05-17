@@ -29,3 +29,52 @@ a. docker build -t rewards .
 b. docker run -p 8080:8080 rewards
 ```
 
+## Dataset
+
+This is sample data is not same as used in the project as I am generating dates randomly.
+
+| Customer ID | Price | Product Name | Date       |
+|-------------|-------|--------------|------------|
+| 1           | 40.0  | Test Product | 05/15/2022 |
+| 1           | 120.0 | Test Product | 04/15/2022 |
+| 1           | 70.0  | Test Product | 03/25/2022 |
+| 1           | 20.0  | Test Product | 03/25/2022 |
+| 1           | 60.0  | Test Product | 05/15/2022 |
+| 1           | 130.0 | Test Product | 05/15/2022 |
+
+#### Output for the same
+```
+{
+  "customerId": 1,
+  "rewardPoints": {
+    "May-2022": 120,
+    "Apr-2022": 90,
+    "Mar-2022": 20
+  },
+  "total": 230
+}
+```
+
+## Sample request
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/api/v1/rewards/1' \
+  -H 'accept: */*'
+```
+
+## Sample response
+
+```
+{
+  "customerId": 1,
+  "rewardPoints": {
+    "May-2022": 30,
+    "Apr-2022": 200
+  },
+  "total": 230
+}
+```
+
+![img.png](img.png)
+
