@@ -31,7 +31,7 @@ b. docker run -p 8080:8080 rewards
 
 ## Dataset
 
-This is sample data is not same as used in the project as I am generating dates randomly.
+This is sample data it is not same as used in the project as I am generating dates randomly.
 
 | Customer ID | Price | Product Name | Date       |
 |-------------|-------|--------------|------------|
